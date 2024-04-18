@@ -4,14 +4,12 @@ import component.Menu;
 import event.EventMenuSelected;
 import Forms.Collect;
 import Forms.Profile;
-import Forms.List;
+import Forms.Listt;
 import Forms.Plan;
 import Forms.Suivi;
 import model.ModelMenu;
-
 import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -22,13 +20,16 @@ import org.jdesktop.animation.timing.TimingTarget;
 import org.jdesktop.animation.timing.TimingTargetAdapter;
 
 public class Main extends javax.swing.JFrame {
-
+    public String username ;
     private Menu menu = new Menu();
     private JPanel main = new JPanel();
     private MigLayout layout;
     private Animator animator;
     private boolean menuShow;
-
+    
+    
+    
+    
     public Main() {
         setVisible(true);
         initComponents();
@@ -44,7 +45,7 @@ public class Main extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 dispose(); // Close current frame
-                new Login();
+                new Login().setVisible(true);
             }
         });
         menu.addEventMenu(new ActionListener() {
@@ -69,7 +70,7 @@ public class Main extends javax.swing.JFrame {
                         showForm(new Plan());
                         break;
                     case 3:
-                        showForm(new List());
+                        showForm(new Listt());
                         break;
                     case 4:
                         showForm(new Collect());
@@ -161,8 +162,7 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    private java.awt.Image img1, imgscl1,img2, imgscl2,img3, imgscl3;
-    private javax.swing.ImageIcon icon1,sclit1,icon2,sclit2,icon3,sclit3;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel body;
     // End of variables declaration//GEN-END:variables

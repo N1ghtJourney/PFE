@@ -1,5 +1,6 @@
 package component;
 
+import Code.Utilisateur;
 import event.EventMenuSelected;
 import model.ModelMenu;
 import swingDesign.ButtonCustom;
@@ -41,6 +42,7 @@ public class Menu extends javax.swing.JPanel {
         setLayout(new MigLayout("wrap, fillx, insets 0", "[fill]", "5[]0[]push[60]0"));
         panelMenu = new JPanel();
         header = new Header();
+        
         bottom = new Bottom();
         createButtonMenu();
         createButtonLogout();
@@ -129,4 +131,8 @@ public class Menu extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+    
+
+
+
 }
